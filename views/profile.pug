@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.profile-table
+    div.profile-nav
+      button(name='watch').tablinks#defaultOpen Watch
+      button(name='favorites').tablinks Favorites
+      button(name='subscribers').tablinks Subcribers
+      button(name='subscriptions').tablinks Subscriptions
+    #watch.profile-content-tab
+      h3 Watch
+      p London is the capital city of England
+    #favorites.profile-content-tab
+      h3 Fav
+      p London is the capital city of England
+    #subscribers.profile-content-tab
+      h3 subscribers
+      p London is the capital city of England
+    #subscriptions.profile-content-tab
+      h3 subscriptions
+      p London is the capital city of England

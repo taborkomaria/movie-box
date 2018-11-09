@@ -1,0 +1,42 @@
+doctype html
+html.background-dark
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/form.css')
+    link(rel='stylesheet', href='/stylesheets/film.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic-ext")
+    style(type='text/css').
+      html {
+        background-color: #303030;
+        
+        height:100%;
+      }
+      body {
+        height:100%;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+  body
+    div.wrapper.login-wrapper
+      form(action="/films", method="post").login-form
+        div.login-icon
+          img(src="/images/video-camera.svg")
+
+        h1.login-title MovieBox
+
+        div.form-item
+          label.form-item__label(for="login") Username
+          input.form-item__input(id="login", type="text", name="login") 
+
+        div.form-item
+          label.form-item__label(for="password") Password
+          input.form-item__input(id="password", type="password", name="password") 
+      
+        input.form-item__input.form-item__input_button(id="submit", type="submit", name="password", value="LOG IN") 
+
+        a.forget-login-link Forgot password?
+
+    script(src='javascripts/preloader.js')
+  

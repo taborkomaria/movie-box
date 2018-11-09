@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/form.css')
+    link(rel='stylesheet', href='/stylesheets/film.css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic-ext")
+  body
+    navbar.nav-sticky
+        img(src="/images/video-camera-white.svg").navbar-login-icon
+        p.navbar-login-title MovieBox
+    div.wrapper
+      block content
+      script(src='javascripts/display.js', type="module")
+      script(src='javascripts/load.js', type="module")
+      script(src='javascripts/form.js', type="module")
+      script(src='javascripts/preloader.js', type="module")
+      script(src='javascripts/profile.js', type="module")

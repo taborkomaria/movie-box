@@ -1,0 +1,35 @@
+div.filter-form#filter-form
+  div.form-item.year-label
+    label.form-item__label(for="year-from-filter") Year from
+    input.form-item__input(id="year-from-filter", type="text", name="year-from") 
+    label.form-item__label(for="year-until-filter") to
+    input.form-item__input(id="year-until-filter", type="text", name="year-until") 
+
+  div.form-item
+    label.form-item__label(for="title-filter") Title
+    input.form-item__input(id="title-filter", type="text", name="title") 
+
+  div.form-item
+    label.form-item__label(for="rating-filter") Rating
+    div.form-item__range
+        div.form-item__range__rating-value(id = "rating-value") 0
+        input.form-item__range__range-slider(id="rating-filter", type="range", name="rating", min="0", max="10", value="0")
+        div.form-item__range__rating-value 10
+  
+  div.form-item
+    label.form-item__label(for="category-filter") Category
+    select.form-item__input(id="category-filter", name="category")
+      option(value="Все") All
+      option(value="Комедия") Comedy
+      option(value="Боевик") Musical
+      option(value="Ужасы") Horror
+    i.form-item__select-arrow
+
+  div.form-item
+    label.form-item__label(for="sort-by") Sort By
+    select.form-item__input(id="sort-by", name="sort")
+      option(value="title") Title
+      option(value="latest") New
+      option(value="best") Best
+    i.form-item__select-arrow
+  

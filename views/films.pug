@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.filters-button#filters-button
+    p Filters
+      img(src="/images/down-arrow.svg").filters-button-arrow
+  include filter.pug
+  
+  div.films(id = "films-container")
+    
