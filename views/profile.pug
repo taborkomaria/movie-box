@@ -1,21 +1,61 @@
 extends layout
 
 block content
-  div.profile-table
-    div.profile-nav
-      button(name='watch').tablinks#defaultOpen Watch
-      button(name='favorites').tablinks Favorites
-      button(name='subscribers').tablinks Subcribers
-      button(name='subscriptions').tablinks Subscriptions
-    #watch.profile-content-tab
-      h3 Watch
-      p London is the capital city of England
-    #favorites.profile-content-tab
-      h3 Fav
-      p London is the capital city of England
-    #subscribers.profile-content-tab
-      h3 subscribers
-      p London is the capital city of England
-    #subscriptions.profile-content-tab
-      h3 subscriptions
-      p London is the capital city of England
+  .left-siderbar-dark
+    .profile-info
+      img(src="/images/user-placeholder.png").profile-photo
+      h2.user-name Jhon Black
+      a.user-email jhonblack@mail.com
+      p Registration date:
+        span 10 November 2010
+  .right-container
+    .profile-table.blue
+      .profile-nav
+        div(data-name='watch', data-color='blue').tablinks#defaultOpenBlue Watch
+        div(data-name='favorites', data-color='blue').tablinks Favorites
+        div(data-name='reviews', data-color='blue').tablinks Reviews
+      #watch.profile-content-tab.profile-content-tab-.films
+        - for (var x = 0; x < 15; x++)
+          .film
+            .film__poster
+              a(href="/film").film__poster-link
+                img(src="/images/film8.jpg" alt="Aquaman poster")
+            a(href="/film").film__title Aquaman
+            .film__date December 2, 2013
+            .film__rating.film__rating_bad 2
+      #favorites.profile-content-tab.films
+        - for (var x = 0; x < 5; x++)
+          .film
+            .film__poster
+              a(href="/film").film__poster-link
+                img(src="/images/film8.jpg" alt="Aquaman poster")
+            a(href="/film").film__title Aquaman
+            .film__date December 2, 2013
+            .film__rating.film__rating_bad 2
+      #reviews.profile-content-tab
+        .comments
+          - for (var x = 0; x < 5; x++)
+            .comment-item 
+              a(href="/film").comment-movie-link Fantastic Beast And Where To Find Them
+              p.comment-data 22 november 2018
+              p.comment-rating 7.5
+                span /10
+              p.commnet-title Best Movie
+              p.comment-text «Богемная рапсодия» — автобиографическая, художественная картина. Можно сказать, что она получилась довольно спорной в силу того, что аудитория разделилась на несколько лагерей. Одни полностью поддерживают мысли по поводу её качества, а некоторые не согласны в корне. Что же получается? Получается большой ажиотаж. С учётом этого за первую неделю проката удалось собрать 150 миллионов долларов. Это внушительные цифры с опором на то, что было затрачено всего 50 миллионов. 
+    .profile-table.pink
+      .profile-nav
+        div(data-name='subscriptions', data-color='pink').tablinks#defaultOpenPink Subscriptions
+        div(data-name='subscribers', data-color='pink').tablinks Subcribers  
+      #subscribers.profile-content-tab.friends-block
+        - for (var x = 0; x < 25; x++)
+          a.friends-item(href="/profile")
+            img(src="/images/user-placeholder.png").friend-photo
+            h3 Jhon White
+            p.friends-button Delete
+      #subscriptions.profile-content-tab.friends-block
+        - for (var x = 0; x < 5; x++)
+          a.friends-item(href="/profile")
+            img(src="/images/user-placeholder.png").friend-photo
+            h3 Jhon White  
+            p.friends-button Unfollow
+

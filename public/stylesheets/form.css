@@ -116,27 +116,17 @@ button:focus {
   width: 250px;
   height: 100%;
   background: #161616;
-  /* filter: blur(1px) */
-  /* background-image: url(/images/bg.jpg) */
-  /* background-position-x: 50% */
   box-shadow: 8px 5px 61px -4px rgba(0, 0, 0, 0.75); }
 
 .filter-form {
   position: fixed;
   width: 250px;
-  /* margin-right: auto */
-  /* margin-left: auto */
   font-size: 13px;
-  /* margin-top: 60px */
-  /* margin-bottom: 30px */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: transparent;
-  /* box-shadow: 8px 5px 61px -4px rgba(0,0,0,0.75) */
-  /* z-index: 122 */
-  /* margin-top: -30% */
   padding: 30px 10px 30px 10px; }
   .filter-form p {
     text-align: center;
